@@ -1,0 +1,41 @@
+doctype html
+html
+head
+script(src='/zaruri.js')
+title=title
+body
+    h1 Student List using Jade engine
+    p(id="token")=body1.token
+    p(id="id")=body1.userid
+    p(id="email")=body1.email
+    p(id="first")=body1.firstname
+    p(id="last")=body1.lastname
+    //- button(onclick='something()') Click
+
+script.
+  function check_test(){
+    console.log("It's working! :D");
+    return "It's working!";
+  }
+
+    var s1 = document.getElementById("token").innerHTML;
+    var s2 = document.getElementById("id").innerHTML;
+    var s3 = document.getElementById("email").innerHTML;
+    var s4 = document.getElementById("first").innerHTML;
+    var s5 = document.getElementById("last").innerHTML;
+    //- document.write(s1);
+    //- document.write(s2);
+    //- document.write(s3);
+    console.log(s1);
+    console.log(s2);
+    console.log(s3);
+    localStorage.setItem('user-token', s1)
+    localStorage.setItem('user-id', s2)
+    localStorage.setItem('user-email', s3)
+    localStorage.setItem('user-firstname', s4)
+    localStorage.setItem('user-lastname', s5)
+    window.close();
+
+//-   var something = function() {
+//-     console.log('something')
+//-   }
