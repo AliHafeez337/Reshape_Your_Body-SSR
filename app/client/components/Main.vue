@@ -7,8 +7,11 @@
         <button @click="onRemoveItem" :data-id="item.id">Remove</button>
       </span>
     </div>
-<a v-on:click.left="copy1" v-on:click.right="copy">Test</a>
-<a v-on:click.left="copy" v-on:click.right="copy">Login with Facebook</a>
+    <a v-on:click.left="copy1" v-on:click.right="copy">Test</a>
+    <br />
+    <a v-on:click.left="copy" v-on:click.right="copy">Login with Facebook</a>
+    <br />
+    <a v-on:click.left="copy2" v-on:click.right="copy">Login with Google</a>
 
     <div :class="$style.controls">
       <input @value="title" @input="onChangeTitle" />
@@ -84,6 +87,10 @@ export default {
       //   console.log('printing')
       //   console.log(res)
       // })
+    },
+    copy2 () {
+      console.log('inside copy')
+      window.open("http://localhost:3000/user/auth/google", "_blank");
     },
     ...mapActions([MAIN__GET_DATA, MAIN__ITEM_ADD_ASYNC]),
     ...mapMutations([MAIN__ITEM_ADD, MAIN__ITEM_DELELE]),

@@ -6,6 +6,10 @@ const baseConfig = require('./webpack.base.js');
 module.exports = merge(baseConfig, {
   entry: './app/entry-server.js',
 
+  node: {
+    __dirname: true,
+  },
+  
   target: 'node',
 
   devtool: 'source-map',
