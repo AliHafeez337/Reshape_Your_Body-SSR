@@ -10,6 +10,7 @@ body
     p(id="email")=body1.email
     p(id="first")=body1.firstname
     p(id="last")=body1.lastname
+    p(id="photo")=body1.photo
     //- button(onclick='something()') Click
 
 script.
@@ -23,6 +24,7 @@ script.
     var s3 = document.getElementById("email").innerHTML;
     var s4 = document.getElementById("first").innerHTML;
     var s5 = document.getElementById("last").innerHTML;
+    var s6 = document.getElementById("photo").innerHTML;
     //- document.write(s1);
     //- document.write(s2);
     //- document.write(s3);
@@ -34,6 +36,7 @@ script.
     localStorage.setItem('user-email', s3)
     localStorage.setItem('user-firstname', s4)
     localStorage.setItem('user-lastname', s5)
+    localStorage.setItem('user-photo', s6)
     window.close();
 
 //-   var something = function() {
